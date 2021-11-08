@@ -1,0 +1,183 @@
+.header {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 190px;
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+  }
+  &-logo span {
+    color: #fff;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: $primary;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+  &-item {
+    .active {
+      color: $text-same-black;
+    }
+  }
+
+  &-link {
+    color: $text-color;
+    transition: all 0.2s linear;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+  }
+
+  &-link.active {
+    font-weight: bold;
+    color: $text-same-black;
+  }
+
+  &-element {
+    position: absolute;
+    left: 0px;
+    top: 160px;
+    width: 131, 58px;
+    height: 115px;
+  }
+
+  &-hero {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0 109px;
+  }
+
+  &-text {
+    max-width: 450px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  &-heading {
+    padding-bottom: 25px;
+  }
+
+  &-desc {
+    margin-bottom: 55px;
+    color: $text-color;
+  }
+
+  &-img {
+    object-fit: cover;
+  }
+}
+.header-bar {
+  font-size: 25px;
+  padding: 10px;
+}
+.header-bar,
+.header-close {
+  display: none;
+}
+
+.header .header-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  &-icon {
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    z-index: 1000000000;
+  }
+}
+
+@media (hover: hover) {
+  .header-link:hover {
+    color: $primary;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-bottom: 50px;
+    padding-top: 30px;
+    &-hero {
+      padding-bottom: 50px;
+    }
+
+    &-hero {
+      gap: 0 20px;
+    }
+
+    &-desc {
+      margin-bottom: 15px;
+      max-width: 500px;
+    }
+    &-text {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    padding-top: 10px;
+    &-bar,
+    &-close {
+      display: block;
+    }
+  }
+  .header-list {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999999;
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  .header-list.is-show {
+    top: 0;
+  }
+  .header-element {
+    display: none;
+  }
+  .header-item {
+    padding: 17px;
+    width: 100%;
+    text-align: center;
+
+    a {
+      color: #fff;
+    }
+  }
+  .header-link.active {
+    color: $primary;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &-hero {
+      flex-direction: column-reverse;
+      gap: 20px 0;
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+}

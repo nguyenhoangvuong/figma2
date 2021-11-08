@@ -1,0 +1,102 @@
+.footer {
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  padding: 118px 190px 113px 190px;
+  position: relative;
+  overflow: hidden;
+  &-container {
+    display: flex;
+    color: #fff;
+    gap: 0 145px;
+  }
+
+  &-item {
+    font-weight: 300;
+    font-size: 18px;
+
+    &-link a {
+      line-height: calc(38 / 18);
+      color: #fff;
+
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-item:first-child {
+    max-width: 378px;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    span {
+      width: 41px;
+      height: 41px;
+      background: #fff;
+      color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: calc(33 / 26);
+      margin-right: 12px;
+    }
+    font-size: 24px;
+    line-height: calc(30 / 24);
+    padding-bottom: 17px;
+    font-weight: 700;
+  }
+
+  &-desc {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    font-weight: 300;
+    padding-bottom: 31px;
+  }
+
+  &-copyright {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    font-weight: 300;
+  }
+
+  &-name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: calc(60 / 20);
+  }
+
+  &-dot {
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer {
+    padding: 40px;
+  }
+  .footer-container {
+    gap: 0 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-container {
+    display: block;
+    text-align: center;
+  }
+  .footer-item {
+    padding-top: 30px;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+  .footer-desc {
+    padding-bottom: 10px;
+  }
+}

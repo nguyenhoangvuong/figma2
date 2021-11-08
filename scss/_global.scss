@@ -1,0 +1,39 @@
+.button {
+  outline: none;
+  border-radius: 100rem;
+  border: 1px solid $primary;
+  padding: 14px 40px;
+  transition: all 0.3s linear;
+  font-size: 16px;
+}
+
+.button--primary {
+  background-color: $primary;
+  color: #fff;
+}
+
+.button--primary:hover {
+  background-color: transparent;
+  color: $primary;
+}
+
+.button--outline {
+  background-color: transparent;
+  color: $primary;
+}
+
+.button--outline:hover {
+  background-color: $primary;
+  color: #fff;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1600px;
+  overflow: hidden;
+}
